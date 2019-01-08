@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9DCC1FD21E2FDF500ADA284 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC1FC21E2FDF500ADA284 /* AppDelegate.m */; };
+		B9DCC20021E2FDF500ADA284 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC1FF21E2FDF500ADA284 /* ViewController.m */; };
+		B9DCC20321E2FDF500ADA284 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC20121E2FDF500ADA284 /* Main.storyboard */; };
+		B9DCC20521E2FDF700ADA284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC20421E2FDF700ADA284 /* Assets.xcassets */; };
+		B9DCC20821E2FDF700ADA284 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC20621E2FDF700ADA284 /* LaunchScreen.storyboard */; };
+		B9DCC20B21E2FDF700ADA284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC20A21E2FDF700ADA284 /* main.m */; };
+		B9DCC21521E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC21421E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.m */; };
+		B9DCC22021E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC21F21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.m */; };
+		B9DCC24021E2FE1000ADA284 /* EMKeyBoardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC22E21E2FE1000ADA284 /* EMKeyBoardButton.m */; };
+		B9DCC24221E2FE1000ADA284 /* EMNumberkeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23121E2FE1000ADA284 /* EMNumberkeyBoard.m */; };
+		B9DCC24321E2FE1000ADA284 /* UIImage+EMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23421E2FE1000ADA284 /* UIImage+EMColor.m */; };
+		B9DCC24521E2FE1000ADA284 /* UIResponder+EMFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23621E2FE1000ADA284 /* UIResponder+EMFirstResponder.m */; };
+		B9DCC24621E2FE1000ADA284 /* EMASCIIKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23821E2FE1000ADA284 /* EMASCIIKeyBoard.m */; };
+		B9DCC24821E2FE1000ADA284 /* EMCustomKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23A21E2FE1000ADA284 /* EMCustomKeyboardView.m */; };
+		B9DCC25221E31A6100ADA284 /* button_backspace_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC24A21E31A6000ADA284 /* button_backspace_delete@2x.png */; };
+		B9DCC25321E31A6100ADA284 /* button_keyboard_shouqi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC24B21E31A6100ADA284 /* button_keyboard_shouqi@2x.png */; };
+		B9DCC25421E31A6100ADA284 /* CH_EN_icon_unsel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC24C21E31A6100ADA284 /* CH_EN_icon_unsel@2x.png */; };
+		B9DCC25521E31A6100ADA284 /* button_backspace_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC24D21E31A6100ADA284 /* button_backspace_delete@3x.png */; };
+		B9DCC25621E31A6100ADA284 /* button_keyboard_shouqi@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC24E21E31A6100ADA284 /* button_keyboard_shouqi@3x.png */; };
+		B9DCC25721E31A6100ADA284 /* CH_EN_icon_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC24F21E31A6100ADA284 /* CH_EN_icon_sel@2x.png */; };
+		B9DCC25821E31A6100ADA284 /* CH_EN_icon_unsel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC25021E31A6100ADA284 /* CH_EN_icon_unsel@3x.png */; };
+		B9DCC25921E31A6100ADA284 /* CH_EN_icon_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC25121E31A6100ADA284 /* CH_EN_icon_sel@3x.png */; };
+		B9DCC25C21E31AEC00ADA284 /* UIColor+EMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC25B21E31AEC00ADA284 /* UIColor+EMColor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9DCC21121E2FDF700ADA284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9DCC1F021E2FDF500ADA284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9DCC1F721E2FDF500ADA284;
+			remoteInfo = EMCustomKeyBoardDemo;
+		};
+		B9DCC21C21E2FDF700ADA284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9DCC1F021E2FDF500ADA284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9DCC1F721E2FDF500ADA284;
+			remoteInfo = EMCustomKeyBoardDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B9DCC1F821E2FDF500ADA284 /* EMCustomKeyBoardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMCustomKeyBoardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9DCC1FB21E2FDF500ADA284 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B9DCC1FC21E2FDF500ADA284 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B9DCC1FE21E2FDF500ADA284 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B9DCC1FF21E2FDF500ADA284 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B9DCC20221E2FDF500ADA284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B9DCC20421E2FDF700ADA284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9DCC20721E2FDF700ADA284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9DCC20921E2FDF700ADA284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9DCC20A21E2FDF700ADA284 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9DCC21021E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMCustomKeyBoardDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9DCC21421E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMCustomKeyBoardDemoTests.m; sourceTree = "<group>"; };
+		B9DCC21621E2FDF700ADA284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9DCC21B21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMCustomKeyBoardDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9DCC21F21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMCustomKeyBoardDemoUITests.m; sourceTree = "<group>"; };
+		B9DCC22121E2FDF700ADA284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9DCC22E21E2FE1000ADA284 /* EMKeyBoardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeyBoardButton.m; sourceTree = "<group>"; };
+		B9DCC22F21E2FE1000ADA284 /* EMASCIIKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASCIIKeyBoard.h; sourceTree = "<group>"; };
+		B9DCC23121E2FE1000ADA284 /* EMNumberkeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNumberkeyBoard.m; sourceTree = "<group>"; };
+		B9DCC23221E2FE1000ADA284 /* EMCustomKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCustomKeyboardView.h; sourceTree = "<group>"; };
+		B9DCC23421E2FE1000ADA284 /* UIImage+EMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EMColor.m"; sourceTree = "<group>"; };
+		B9DCC23621E2FE1000ADA284 /* UIResponder+EMFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+EMFirstResponder.m"; sourceTree = "<group>"; };
+		B9DCC23721E2FE1000ADA284 /* EMKeyBoardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeyBoardButton.h; sourceTree = "<group>"; };
+		B9DCC23821E2FE1000ADA284 /* EMASCIIKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASCIIKeyBoard.m; sourceTree = "<group>"; };
+		B9DCC23A21E2FE1000ADA284 /* EMCustomKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCustomKeyboardView.m; sourceTree = "<group>"; };
+		B9DCC23B21E2FE1000ADA284 /* EMNumberkeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNumberkeyBoard.h; sourceTree = "<group>"; };
+		B9DCC23D21E2FE1000ADA284 /* UIResponder+EMFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+EMFirstResponder.h"; sourceTree = "<group>"; };
+		B9DCC23F21E2FE1000ADA284 /* UIImage+EMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EMColor.h"; sourceTree = "<group>"; };
+		B9DCC24921E2FECF00ADA284 /* EMKeyboardDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMKeyboardDefine.h; sourceTree = "<group>"; };
+		B9DCC24A21E31A6000ADA284 /* button_backspace_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_backspace_delete@2x.png"; sourceTree = "<group>"; };
+		B9DCC24B21E31A6100ADA284 /* button_keyboard_shouqi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_keyboard_shouqi@2x.png"; sourceTree = "<group>"; };
+		B9DCC24C21E31A6100ADA284 /* CH_EN_icon_unsel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CH_EN_icon_unsel@2x.png"; sourceTree = "<group>"; };
+		B9DCC24D21E31A6100ADA284 /* button_backspace_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_backspace_delete@3x.png"; sourceTree = "<group>"; };
+		B9DCC24E21E31A6100ADA284 /* button_keyboard_shouqi@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_keyboard_shouqi@3x.png"; sourceTree = "<group>"; };
+		B9DCC24F21E31A6100ADA284 /* CH_EN_icon_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CH_EN_icon_sel@2x.png"; sourceTree = "<group>"; };
+		B9DCC25021E31A6100ADA284 /* CH_EN_icon_unsel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CH_EN_icon_unsel@3x.png"; sourceTree = "<group>"; };
+		B9DCC25121E31A6100ADA284 /* CH_EN_icon_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CH_EN_icon_sel@3x.png"; sourceTree = "<group>"; };
+		B9DCC25A21E31AEC00ADA284 /* UIColor+EMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+EMColor.h"; sourceTree = "<group>"; };
+		B9DCC25B21E31AEC00ADA284 /* UIColor+EMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EMColor.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9DCC1F521E2FDF500ADA284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DCC20D21E2FDF700ADA284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DCC21821E2FDF700ADA284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9DCC1EF21E2FDF500ADA284 = {
+			isa = PBXGroup;
+			children = (
+				B9DCC1FA21E2FDF500ADA284 /* EMCustomKeyBoardDemo */,
+				B9DCC21321E2FDF700ADA284 /* EMCustomKeyBoardDemoTests */,
+				B9DCC21E21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests */,
+				B9DCC1F921E2FDF500ADA284 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9DCC1F921E2FDF500ADA284 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9DCC1F821E2FDF500ADA284 /* EMCustomKeyBoardDemo.app */,
+				B9DCC21021E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.xctest */,
+				B9DCC21B21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9DCC1FA21E2FDF500ADA284 /* EMCustomKeyBoardDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B9DCC22D21E2FE1000ADA284 /* EMKeyBoard */,
+				B9DCC1FB21E2FDF500ADA284 /* AppDelegate.h */,
+				B9DCC1FC21E2FDF500ADA284 /* AppDelegate.m */,
+				B9DCC1FE21E2FDF500ADA284 /* ViewController.h */,
+				B9DCC1FF21E2FDF500ADA284 /* ViewController.m */,
+				B9DCC20121E2FDF500ADA284 /* Main.storyboard */,
+				B9DCC20421E2FDF700ADA284 /* Assets.xcassets */,
+				B9DCC20621E2FDF700ADA284 /* LaunchScreen.storyboard */,
+				B9DCC20921E2FDF700ADA284 /* Info.plist */,
+				B9DCC20A21E2FDF700ADA284 /* main.m */,
+			);
+			path = EMCustomKeyBoardDemo;
+			sourceTree = "<group>";
+		};
+		B9DCC21321E2FDF700ADA284 /* EMCustomKeyBoardDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9DCC21421E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.m */,
+				B9DCC21621E2FDF700ADA284 /* Info.plist */,
+			);
+			path = EMCustomKeyBoardDemoTests;
+			sourceTree = "<group>";
+		};
+		B9DCC21E21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B9DCC21F21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.m */,
+				B9DCC22121E2FDF700ADA284 /* Info.plist */,
+			);
+			path = EMCustomKeyBoardDemoUITests;
+			sourceTree = "<group>";
+		};
+		B9DCC22D21E2FE1000ADA284 /* EMKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				B9DCC24A21E31A6000ADA284 /* button_backspace_delete@2x.png */,
+				B9DCC24D21E31A6100ADA284 /* button_backspace_delete@3x.png */,
+				B9DCC24B21E31A6100ADA284 /* button_keyboard_shouqi@2x.png */,
+				B9DCC24E21E31A6100ADA284 /* button_keyboard_shouqi@3x.png */,
+				B9DCC24F21E31A6100ADA284 /* CH_EN_icon_sel@2x.png */,
+				B9DCC25121E31A6100ADA284 /* CH_EN_icon_sel@3x.png */,
+				B9DCC24C21E31A6100ADA284 /* CH_EN_icon_unsel@2x.png */,
+				B9DCC25021E31A6100ADA284 /* CH_EN_icon_unsel@3x.png */,
+				B9DCC25A21E31AEC00ADA284 /* UIColor+EMColor.h */,
+				B9DCC25B21E31AEC00ADA284 /* UIColor+EMColor.m */,
+				B9DCC23721E2FE1000ADA284 /* EMKeyBoardButton.h */,
+				B9DCC22E21E2FE1000ADA284 /* EMKeyBoardButton.m */,
+				B9DCC22F21E2FE1000ADA284 /* EMASCIIKeyBoard.h */,
+				B9DCC23821E2FE1000ADA284 /* EMASCIIKeyBoard.m */,
+				B9DCC23B21E2FE1000ADA284 /* EMNumberkeyBoard.h */,
+				B9DCC23121E2FE1000ADA284 /* EMNumberkeyBoard.m */,
+				B9DCC23221E2FE1000ADA284 /* EMCustomKeyboardView.h */,
+				B9DCC23A21E2FE1000ADA284 /* EMCustomKeyboardView.m */,
+				B9DCC23F21E2FE1000ADA284 /* UIImage+EMColor.h */,
+				B9DCC23421E2FE1000ADA284 /* UIImage+EMColor.m */,
+				B9DCC23D21E2FE1000ADA284 /* UIResponder+EMFirstResponder.h */,
+				B9DCC23621E2FE1000ADA284 /* UIResponder+EMFirstResponder.m */,
+				B9DCC24921E2FECF00ADA284 /* EMKeyboardDefine.h */,
+			);
+			path = EMKeyBoard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9DCC1F721E2FDF500ADA284 /* EMCustomKeyBoardDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9DCC22421E2FDF700ADA284 /* Build configuration list for PBXNativeTarget "EMCustomKeyBoardDemo" */;
+			buildPhases = (
+				B9DCC1F421E2FDF500ADA284 /* Sources */,
+				B9DCC1F521E2FDF500ADA284 /* Frameworks */,
+				B9DCC1F621E2FDF500ADA284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EMCustomKeyBoardDemo;
+			productName = EMCustomKeyBoardDemo;
+			productReference = B9DCC1F821E2FDF500ADA284 /* EMCustomKeyBoardDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9DCC20F21E2FDF700ADA284 /* EMCustomKeyBoardDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9DCC22721E2FDF700ADA284 /* Build configuration list for PBXNativeTarget "EMCustomKeyBoardDemoTests" */;
+			buildPhases = (
+				B9DCC20C21E2FDF700ADA284 /* Sources */,
+				B9DCC20D21E2FDF700ADA284 /* Frameworks */,
+				B9DCC20E21E2FDF700ADA284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9DCC21221E2FDF700ADA284 /* PBXTargetDependency */,
+			);
+			name = EMCustomKeyBoardDemoTests;
+			productName = EMCustomKeyBoardDemoTests;
+			productReference = B9DCC21021E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B9DCC21A21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9DCC22A21E2FDF700ADA284 /* Build configuration list for PBXNativeTarget "EMCustomKeyBoardDemoUITests" */;
+			buildPhases = (
+				B9DCC21721E2FDF700ADA284 /* Sources */,
+				B9DCC21821E2FDF700ADA284 /* Frameworks */,
+				B9DCC21921E2FDF700ADA284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9DCC21D21E2FDF700ADA284 /* PBXTargetDependency */,
+			);
+			name = EMCustomKeyBoardDemoUITests;
+			productName = EMCustomKeyBoardDemoUITests;
+			productReference = B9DCC21B21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9DCC1F021E2FDF500ADA284 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = zhaochen;
+				TargetAttributes = {
+					B9DCC1F721E2FDF500ADA284 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B9DCC20F21E2FDF700ADA284 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B9DCC1F721E2FDF500ADA284;
+					};
+					B9DCC21A21E2FDF700ADA284 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B9DCC1F721E2FDF500ADA284;
+					};
+				};
+			};
+			buildConfigurationList = B9DCC1F321E2FDF500ADA284 /* Build configuration list for PBXProject "EMCustomKeyBoardDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9DCC1EF21E2FDF500ADA284;
+			productRefGroup = B9DCC1F921E2FDF500ADA284 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9DCC1F721E2FDF500ADA284 /* EMCustomKeyBoardDemo */,
+				B9DCC20F21E2FDF700ADA284 /* EMCustomKeyBoardDemoTests */,
+				B9DCC21A21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9DCC1F621E2FDF500ADA284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9DCC20821E2FDF700ADA284 /* LaunchScreen.storyboard in Resources */,
+				B9DCC25921E31A6100ADA284 /* CH_EN_icon_sel@3x.png in Resources */,
+				B9DCC25221E31A6100ADA284 /* button_backspace_delete@2x.png in Resources */,
+				B9DCC20521E2FDF700ADA284 /* Assets.xcassets in Resources */,
+				B9DCC25721E31A6100ADA284 /* CH_EN_icon_sel@2x.png in Resources */,
+				B9DCC25321E31A6100ADA284 /* button_keyboard_shouqi@2x.png in Resources */,
+				B9DCC20321E2FDF500ADA284 /* Main.storyboard in Resources */,
+				B9DCC25521E31A6100ADA284 /* button_backspace_delete@3x.png in Resources */,
+				B9DCC25421E31A6100ADA284 /* CH_EN_icon_unsel@2x.png in Resources */,
+				B9DCC25821E31A6100ADA284 /* CH_EN_icon_unsel@3x.png in Resources */,
+				B9DCC25621E31A6100ADA284 /* button_keyboard_shouqi@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DCC20E21E2FDF700ADA284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DCC21921E2FDF700ADA284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9DCC1F421E2FDF500ADA284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9DCC25C21E31AEC00ADA284 /* UIColor+EMColor.m in Sources */,
+				B9DCC24021E2FE1000ADA284 /* EMKeyBoardButton.m in Sources */,
+				B9DCC20021E2FDF500ADA284 /* ViewController.m in Sources */,
+				B9DCC24621E2FE1000ADA284 /* EMASCIIKeyBoard.m in Sources */,
+				B9DCC24521E2FE1000ADA284 /* UIResponder+EMFirstResponder.m in Sources */,
+				B9DCC24321E2FE1000ADA284 /* UIImage+EMColor.m in Sources */,
+				B9DCC20B21E2FDF700ADA284 /* main.m in Sources */,
+				B9DCC24821E2FE1000ADA284 /* EMCustomKeyboardView.m in Sources */,
+				B9DCC1FD21E2FDF500ADA284 /* AppDelegate.m in Sources */,
+				B9DCC24221E2FE1000ADA284 /* EMNumberkeyBoard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DCC20C21E2FDF700ADA284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9DCC21521E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DCC21721E2FDF700ADA284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9DCC22021E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9DCC21221E2FDF700ADA284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9DCC1F721E2FDF500ADA284 /* EMCustomKeyBoardDemo */;
+			targetProxy = B9DCC21121E2FDF700ADA284 /* PBXContainerItemProxy */;
+		};
+		B9DCC21D21E2FDF700ADA284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9DCC1F721E2FDF500ADA284 /* EMCustomKeyBoardDemo */;
+			targetProxy = B9DCC21C21E2FDF700ADA284 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B9DCC20121E2FDF500ADA284 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9DCC20221E2FDF500ADA284 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B9DCC20621E2FDF700ADA284 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9DCC20721E2FDF700ADA284 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9DCC22221E2FDF700ADA284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B9DCC22321E2FDF700ADA284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9DCC22521E2FDF700ADA284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EMCustomKeyBoardDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.emoney.EMCustomKeyBoardDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9DCC22621E2FDF700ADA284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EMCustomKeyBoardDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.emoney.EMCustomKeyBoardDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B9DCC22821E2FDF700ADA284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EMCustomKeyBoardDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.emoney.EMCustomKeyBoardDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EMCustomKeyBoardDemo.app/EMCustomKeyBoardDemo";
+			};
+			name = Debug;
+		};
+		B9DCC22921E2FDF700ADA284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EMCustomKeyBoardDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.emoney.EMCustomKeyBoardDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EMCustomKeyBoardDemo.app/EMCustomKeyBoardDemo";
+			};
+			name = Release;
+		};
+		B9DCC22B21E2FDF700ADA284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EMCustomKeyBoardDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.emoney.EMCustomKeyBoardDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EMCustomKeyBoardDemo;
+			};
+			name = Debug;
+		};
+		B9DCC22C21E2FDF700ADA284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EMCustomKeyBoardDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.emoney.EMCustomKeyBoardDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EMCustomKeyBoardDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9DCC1F321E2FDF500ADA284 /* Build configuration list for PBXProject "EMCustomKeyBoardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9DCC22221E2FDF700ADA284 /* Debug */,
+				B9DCC22321E2FDF700ADA284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9DCC22421E2FDF700ADA284 /* Build configuration list for PBXNativeTarget "EMCustomKeyBoardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9DCC22521E2FDF700ADA284 /* Debug */,
+				B9DCC22621E2FDF700ADA284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9DCC22721E2FDF700ADA284 /* Build configuration list for PBXNativeTarget "EMCustomKeyBoardDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9DCC22821E2FDF700ADA284 /* Debug */,
+				B9DCC22921E2FDF700ADA284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9DCC22A21E2FDF700ADA284 /* Build configuration list for PBXNativeTarget "EMCustomKeyBoardDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9DCC22B21E2FDF700ADA284 /* Debug */,
+				B9DCC22C21E2FDF700ADA284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9DCC1F021E2FDF500ADA284 /* Project object */;
+}
