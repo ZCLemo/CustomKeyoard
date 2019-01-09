@@ -15,11 +15,11 @@
 		B9DCC20B21E2FDF700ADA284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC20A21E2FDF700ADA284 /* main.m */; };
 		B9DCC21521E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC21421E2FDF700ADA284 /* EMCustomKeyBoardDemoTests.m */; };
 		B9DCC22021E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC21F21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.m */; };
-		B9DCC24021E2FE1000ADA284 /* EMKeyBoardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC22E21E2FE1000ADA284 /* EMKeyBoardButton.m */; };
-		B9DCC24221E2FE1000ADA284 /* EMNumberkeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23121E2FE1000ADA284 /* EMNumberkeyBoard.m */; };
+		B9DCC24021E2FE1000ADA284 /* EMKeyboardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC22E21E2FE1000ADA284 /* EMKeyboardButton.m */; };
+		B9DCC24221E2FE1000ADA284 /* EMNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23121E2FE1000ADA284 /* EMNumberKeyboard.m */; };
 		B9DCC24321E2FE1000ADA284 /* UIImage+EMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23421E2FE1000ADA284 /* UIImage+EMColor.m */; };
 		B9DCC24521E2FE1000ADA284 /* UIResponder+EMFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23621E2FE1000ADA284 /* UIResponder+EMFirstResponder.m */; };
-		B9DCC24621E2FE1000ADA284 /* EMASCIIKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23821E2FE1000ADA284 /* EMASCIIKeyBoard.m */; };
+		B9DCC24621E2FE1000ADA284 /* EMASCIIKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23821E2FE1000ADA284 /* EMASCIIKeyboard.m */; };
 		B9DCC24821E2FE1000ADA284 /* EMCustomKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCC23A21E2FE1000ADA284 /* EMCustomKeyboardView.m */; };
 		B9DCC25221E31A6100ADA284 /* button_backspace_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC24A21E31A6000ADA284 /* button_backspace_delete@2x.png */; };
 		B9DCC25321E31A6100ADA284 /* button_keyboard_shouqi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DCC24B21E31A6100ADA284 /* button_keyboard_shouqi@2x.png */; };
@@ -66,16 +66,16 @@
 		B9DCC21B21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMCustomKeyBoardDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DCC21F21E2FDF700ADA284 /* EMCustomKeyBoardDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMCustomKeyBoardDemoUITests.m; sourceTree = "<group>"; };
 		B9DCC22121E2FDF700ADA284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9DCC22E21E2FE1000ADA284 /* EMKeyBoardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeyBoardButton.m; sourceTree = "<group>"; };
-		B9DCC22F21E2FE1000ADA284 /* EMASCIIKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASCIIKeyBoard.h; sourceTree = "<group>"; };
-		B9DCC23121E2FE1000ADA284 /* EMNumberkeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNumberkeyBoard.m; sourceTree = "<group>"; };
+		B9DCC22E21E2FE1000ADA284 /* EMKeyboardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeyboardButton.m; sourceTree = "<group>"; };
+		B9DCC22F21E2FE1000ADA284 /* EMASCIIKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMASCIIKeyboard.h; sourceTree = "<group>"; };
+		B9DCC23121E2FE1000ADA284 /* EMNumberKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMNumberKeyboard.m; sourceTree = "<group>"; };
 		B9DCC23221E2FE1000ADA284 /* EMCustomKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCustomKeyboardView.h; sourceTree = "<group>"; };
 		B9DCC23421E2FE1000ADA284 /* UIImage+EMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EMColor.m"; sourceTree = "<group>"; };
 		B9DCC23621E2FE1000ADA284 /* UIResponder+EMFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+EMFirstResponder.m"; sourceTree = "<group>"; };
-		B9DCC23721E2FE1000ADA284 /* EMKeyBoardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeyBoardButton.h; sourceTree = "<group>"; };
-		B9DCC23821E2FE1000ADA284 /* EMASCIIKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASCIIKeyBoard.m; sourceTree = "<group>"; };
+		B9DCC23721E2FE1000ADA284 /* EMKeyboardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeyboardButton.h; sourceTree = "<group>"; };
+		B9DCC23821E2FE1000ADA284 /* EMASCIIKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMASCIIKeyboard.m; sourceTree = "<group>"; };
 		B9DCC23A21E2FE1000ADA284 /* EMCustomKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCustomKeyboardView.m; sourceTree = "<group>"; };
-		B9DCC23B21E2FE1000ADA284 /* EMNumberkeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNumberkeyBoard.h; sourceTree = "<group>"; };
+		B9DCC23B21E2FE1000ADA284 /* EMNumberKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNumberKeyboard.h; sourceTree = "<group>"; };
 		B9DCC23D21E2FE1000ADA284 /* UIResponder+EMFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+EMFirstResponder.h"; sourceTree = "<group>"; };
 		B9DCC23F21E2FE1000ADA284 /* UIImage+EMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EMColor.h"; sourceTree = "<group>"; };
 		B9DCC24921E2FECF00ADA284 /* EMKeyboardDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMKeyboardDefine.h; sourceTree = "<group>"; };
@@ -184,12 +184,12 @@
 				B9DCC25021E31A6100ADA284 /* CH_EN_icon_unsel@3x.png */,
 				B9DCC25A21E31AEC00ADA284 /* UIColor+EMColor.h */,
 				B9DCC25B21E31AEC00ADA284 /* UIColor+EMColor.m */,
-				B9DCC23721E2FE1000ADA284 /* EMKeyBoardButton.h */,
-				B9DCC22E21E2FE1000ADA284 /* EMKeyBoardButton.m */,
-				B9DCC22F21E2FE1000ADA284 /* EMASCIIKeyBoard.h */,
-				B9DCC23821E2FE1000ADA284 /* EMASCIIKeyBoard.m */,
-				B9DCC23B21E2FE1000ADA284 /* EMNumberkeyBoard.h */,
-				B9DCC23121E2FE1000ADA284 /* EMNumberkeyBoard.m */,
+				B9DCC23721E2FE1000ADA284 /* EMKeyboardButton.h */,
+				B9DCC22E21E2FE1000ADA284 /* EMKeyboardButton.m */,
+				B9DCC22F21E2FE1000ADA284 /* EMASCIIKeyboard.h */,
+				B9DCC23821E2FE1000ADA284 /* EMASCIIKeyboard.m */,
+				B9DCC23B21E2FE1000ADA284 /* EMNumberKeyboard.h */,
+				B9DCC23121E2FE1000ADA284 /* EMNumberKeyboard.m */,
 				B9DCC23221E2FE1000ADA284 /* EMCustomKeyboardView.h */,
 				B9DCC23A21E2FE1000ADA284 /* EMCustomKeyboardView.m */,
 				B9DCC23F21E2FE1000ADA284 /* UIImage+EMColor.h */,
@@ -340,15 +340,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9DCC25C21E31AEC00ADA284 /* UIColor+EMColor.m in Sources */,
-				B9DCC24021E2FE1000ADA284 /* EMKeyBoardButton.m in Sources */,
+				B9DCC24021E2FE1000ADA284 /* EMKeyboardButton.m in Sources */,
 				B9DCC20021E2FDF500ADA284 /* ViewController.m in Sources */,
-				B9DCC24621E2FE1000ADA284 /* EMASCIIKeyBoard.m in Sources */,
+				B9DCC24621E2FE1000ADA284 /* EMASCIIKeyboard.m in Sources */,
 				B9DCC24521E2FE1000ADA284 /* UIResponder+EMFirstResponder.m in Sources */,
 				B9DCC24321E2FE1000ADA284 /* UIImage+EMColor.m in Sources */,
 				B9DCC20B21E2FDF700ADA284 /* main.m in Sources */,
 				B9DCC24821E2FE1000ADA284 /* EMCustomKeyboardView.m in Sources */,
 				B9DCC1FD21E2FDF500ADA284 /* AppDelegate.m in Sources */,
-				B9DCC24221E2FE1000ADA284 /* EMNumberkeyBoard.m in Sources */,
+				B9DCC24221E2FE1000ADA284 /* EMNumberKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

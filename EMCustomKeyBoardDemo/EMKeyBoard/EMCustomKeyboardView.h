@@ -7,8 +7,8 @@
 
 #import <UIKit/UIKit.h>
 #import "EMKeyboardDefine.h"
-#import "EMNumberkeyBoard.h"
-#import "EMASCIIKeyBoard.h"
+#import "EMNumberKeyboard.h"
+#import "EMASCIIKeyboard.h"
 
 @interface EMCustomKeyboardView : UIView
 

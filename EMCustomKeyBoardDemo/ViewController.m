@@ -72,21 +72,21 @@
 {
     EMCustomKeyboardView *keyboardView = [[EMCustomKeyboardView alloc] init];
     keyboardView.keyboardType = EMCustomKeyboardTypeStockPosition;
-    keyboardView.stockPositionBtnClickBlock = ^(EMKeyBoardButtonType keyBoardButtonType) {
-        switch (keyBoardButtonType) {
-            case EMKeyBoardButtonTypeStockPositionFull:
+    keyboardView.stockPositionBtnClickBlock = ^(EMKeyboardButtonType KeyboardButtonType) {
+        switch (KeyboardButtonType) {
+            case EMKeyboardButtonTypeStockPositionFull:
                 NSLog(@"全仓");
                 break;
                 
-            case EMKeyBoardButtonTypeStockPositionHalf:
+            case EMKeyboardButtonTypeStockPositionHalf:
                 NSLog(@"半仓");
                 break;
                 
-            case EMKeyBoardButtonTypeStockPositionOneThird:
+            case EMKeyboardButtonTypeStockPositionOneThird:
                 NSLog(@"1/3仓");
                 break;
                 
-            case EMKeyBoardButtonTypeStockPositionQuartern:
+            case EMKeyboardButtonTypeStockPositionQuartern:
                 NSLog(@"1/4仓");
                 break;
                 

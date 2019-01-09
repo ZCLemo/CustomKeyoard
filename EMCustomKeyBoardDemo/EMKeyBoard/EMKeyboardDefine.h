@@ -63,56 +63,56 @@ typedef NS_ENUM(NSInteger,EMCustomKeyboardType) {
 /**
  按钮类型
  
- - EMKeyBoardButtonTypeNone: 空白
- - EMKeyBoardButtonTypeNumber: 数字
- - EMKeyBoardButtonTypeLetter: 字母
- - EMKeyBoardButtonTypeDelete: 删除按钮
- - EMKeyBoardButtonTypeResign: 数字键盘收起
- - EMKeyBoardButtonTypeDecimal: 数字键盘小数点
- - EMKeyBoardButtonTypeABC: 切换英文键盘
- - EMKeyBoardButtonTypeComplete: 完成
- - EMKeyBoardButtonTypeComma: 逗号
- - EMKeyBoardButtonTypeToggleCase: 大小写切换
- - EMKeyBoardButtonTypeASCIIDelete: 字母键盘的删除按钮
- - EMKeyBoardButtonTypeToNumber: 切换数字键盘按钮
- - EMKeyBoardButtonTypeASCIISpace: 字母键盘空格键
- - EMKeyBoardButtonTypeASCIIResign: 字母键盘收起键
- - EMKeyBoardButtonTypeASCIIDecimal: 字母键盘小数点
- - EMKeyBoardButtonTypeStockHeader600: 股票600开头
- - EMKeyBoardButtonTypeStockHeader601: 股票601开头
- - EMKeyBoardButtonTypeStockHeader000: 股票000开头
- - EMKeyBoardButtonTypeStockHeader002: 股票002开头
- - EMKeyBoardButtonTypeStockHeader300: 股票300开头
- - EMKeyBoardButtonTypeStockHeader00: 股票00开头
- - EMKeyBoardButtonTypeStockPositionFull: 全仓
- - EMKeyBoardButtonTypeStockPositionHalf: 半仓
- - EMKeyBoardButtonTypeStockPositionOneThird: 三分之一
- - EMKeyBoardButtonTypeStockPositionQuartern: 四分之一
+ - EMKeyboardButtonTypeNone: 空白
+ - EMKeyboardButtonTypeNumber: 数字
+ - EMKeyboardButtonTypeLetter: 字母
+ - EMKeyboardButtonTypeDelete: 删除按钮
+ - EMKeyboardButtonTypeResign: 数字键盘收起
+ - EMKeyboardButtonTypeDecimal: 数字键盘小数点
+ - EMKeyboardButtonTypeABC: 切换英文键盘
+ - EMKeyboardButtonTypeComplete: 完成
+ - EMKeyboardButtonTypeComma: 逗号
+ - EMKeyboardButtonTypeToggleCase: 大小写切换
+ - EMKeyboardButtonTypeASCIIDelete: 字母键盘的删除按钮
+ - EMKeyboardButtonTypeToNumber: 切换数字键盘按钮
+ - EMKeyboardButtonTypeASCIISpace: 字母键盘空格键
+ - EMKeyboardButtonTypeASCIIResign: 字母键盘收起键
+ - EMKeyboardButtonTypeASCIIDecimal: 字母键盘小数点
+ - EMKeyboardButtonTypeStockHeader600: 股票600开头
+ - EMKeyboardButtonTypeStockHeader601: 股票601开头
+ - EMKeyboardButtonTypeStockHeader000: 股票000开头
+ - EMKeyboardButtonTypeStockHeader002: 股票002开头
+ - EMKeyboardButtonTypeStockHeader300: 股票300开头
+ - EMKeyboardButtonTypeStockHeader00: 股票00开头
+ - EMKeyboardButtonTypeStockPositionFull: 全仓
+ - EMKeyboardButtonTypeStockPositionHalf: 半仓
+ - EMKeyboardButtonTypeStockPositionOneThird: 三分之一
+ - EMKeyboardButtonTypeStockPositionQuartern: 四分之一
  */
-typedef NS_ENUM(NSInteger,EMKeyBoardButtonType) {
-    EMKeyBoardButtonTypeNone = 10000,
-    EMKeyBoardButtonTypeNumber,
-    EMKeyBoardButtonTypeLetter,
-    EMKeyBoardButtonTypeDelete,
-    EMKeyBoardButtonTypeResign,
-    EMKeyBoardButtonTypeDecimal,
-    EMKeyBoardButtonTypeABC,
-    EMKeyBoardButtonTypeComplete,
-    EMKeyBoardButtonTypeComma,
-    EMKeyBoardButtonTypeToggleCase,
-    EMKeyBoardButtonTypeASCIIDelete,
-    EMKeyBoardButtonTypeToNumber,
-    EMKeyBoardButtonTypeASCIISpace,
-    EMKeyBoardButtonTypeASCIIResign,
-    EMKeyBoardButtonTypeASCIIDecimal,
-    EMKeyBoardButtonTypeStockHeader600,
-    EMKeyBoardButtonTypeStockHeader601,
-    EMKeyBoardButtonTypeStockHeader000,
-    EMKeyBoardButtonTypeStockHeader002,
-    EMKeyBoardButtonTypeStockHeader300,
-    EMKeyBoardButtonTypeStockHeader00,
-    EMKeyBoardButtonTypeStockPositionFull,
-    EMKeyBoardButtonTypeStockPositionHalf,
-    EMKeyBoardButtonTypeStockPositionOneThird,
-    EMKeyBoardButtonTypeStockPositionQuartern,
+typedef NS_ENUM(NSInteger,EMKeyboardButtonType) {
+    EMKeyboardButtonTypeNone = 10000,
+    EMKeyboardButtonTypeNumber,
+    EMKeyboardButtonTypeLetter,
+    EMKeyboardButtonTypeDelete,
+    EMKeyboardButtonTypeResign,
+    EMKeyboardButtonTypeDecimal,
+    EMKeyboardButtonTypeABC,
+    EMKeyboardButtonTypeComplete,
+    EMKeyboardButtonTypeComma,
+    EMKeyboardButtonTypeToggleCase,
+    EMKeyboardButtonTypeASCIIDelete,
+    EMKeyboardButtonTypeToNumber,
+    EMKeyboardButtonTypeASCIISpace,
+    EMKeyboardButtonTypeASCIIResign,
+    EMKeyboardButtonTypeASCIIDecimal,
+    EMKeyboardButtonTypeStockHeader600,
+    EMKeyboardButtonTypeStockHeader601,
+    EMKeyboardButtonTypeStockHeader000,
+    EMKeyboardButtonTypeStockHeader002,
+    EMKeyboardButtonTypeStockHeader300,
+    EMKeyboardButtonTypeStockHeader00,
+    EMKeyboardButtonTypeStockPositionFull,
+    EMKeyboardButtonTypeStockPositionHalf,
+    EMKeyboardButtonTypeStockPositionOneThird,
+    EMKeyboardButtonTypeStockPositionQuartern,
 };

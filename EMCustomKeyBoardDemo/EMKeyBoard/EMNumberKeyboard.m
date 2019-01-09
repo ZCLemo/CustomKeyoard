@@ -1,20 +1,20 @@
 //
-//  EMNumberkeyBoard.m
+//  EMNumberKeyboard.m
 //  AFNetworking
 //
 //  Created by zhaochen on 2019/1/3.
 //
 
-#import "EMNumberkeyBoard.h"
-#import "EMKeyBoardButton.h"
+#import "EMNumberKeyboard.h"
+#import "EMKeyboardButton.h"
 #import "UIResponder+EMFirstResponder.h"
 #import "UIImage+EMColor.h"
 
-@interface EMNumberkeyBoard ()
+@interface EMNumberKeyboard ()
 
 @end
 
-@implementation EMNumberkeyBoard
+@implementation EMNumberKeyboard
 
 #pragma mark - init
 
@@ -36,9 +36,9 @@
     }
     NSMutableArray *numArray = [NSMutableArray arrayWithArray:@[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0"]];
     for (UIView *subView in self.subviews) {
-        if ([subView isKindOfClass:[EMKeyBoardButton class]]) {
-            EMKeyBoardButton *subBtn = (EMKeyBoardButton *)subView;
-            if (subBtn.keyBoardButtonType == EMKeyBoardButtonTypeNumber) {
+        if ([subView isKindOfClass:[EMKeyboardButton class]]) {
+            EMKeyboardButton *subBtn = (EMKeyboardButton *)subView;
+            if (subBtn.KeyboardButtonType == EMKeyboardButtonTypeNumber) {
                 //随机键盘上的数字
                 int loc = arc4random_uniform((int)numArray.count);
                 [subBtn setTitle:[numArray objectAtIndex:loc] forState:UIControlStateNormal];
@@ -60,26 +60,26 @@
     switch (self.keyboardType) {
         case EMCustomKeyboardTypeNumber:{
             col = 4;
-            keyBoards = @[@(1),@(2),@(3),@(EMKeyBoardButtonTypeDelete),@(4),@(5),@(6),@(EMKeyBoardButtonTypeNone),@(7),@(8),@(9),@(EMKeyBoardButtonTypeDecimal),@(EMKeyBoardButtonTypeABC),@(0),@(EMKeyBoardButtonTypeResign),@(EMKeyBoardButtonTypeComplete)];
+            keyBoards = @[@(1),@(2),@(3),@(EMKeyboardButtonTypeDelete),@(4),@(5),@(6),@(EMKeyboardButtonTypeNone),@(7),@(8),@(9),@(EMKeyboardButtonTypeDecimal),@(EMKeyboardButtonTypeABC),@(0),@(EMKeyboardButtonTypeResign),@(EMKeyboardButtonTypeComplete)];
         }
             break;
             
         case EMCustomKeyboardTypeStockInput:{
             col = 5;
-            keyBoards = @[@(EMKeyBoardButtonTypeStockHeader600),@(1),@(2),@(3),@(EMKeyBoardButtonTypeDelete),@(EMKeyBoardButtonTypeStockHeader601),@(4),@(5),@(6),@(EMKeyBoardButtonTypeStockHeader002),@(EMKeyBoardButtonTypeStockHeader000),@(7),@(8),@(9),@(EMKeyBoardButtonTypeStockHeader300),@(EMKeyBoardButtonTypeABC),@(EMKeyBoardButtonTypeStockHeader00),@(0),@(EMKeyBoardButtonTypeResign),@(EMKeyBoardButtonTypeComplete)];
+            keyBoards = @[@(EMKeyboardButtonTypeStockHeader600),@(1),@(2),@(3),@(EMKeyboardButtonTypeDelete),@(EMKeyboardButtonTypeStockHeader601),@(4),@(5),@(6),@(EMKeyboardButtonTypeStockHeader002),@(EMKeyboardButtonTypeStockHeader000),@(7),@(8),@(9),@(EMKeyboardButtonTypeStockHeader300),@(EMKeyboardButtonTypeABC),@(EMKeyboardButtonTypeStockHeader00),@(0),@(EMKeyboardButtonTypeResign),@(EMKeyboardButtonTypeComplete)];
         }
             break;
             
         case EMCustomKeyboardTypeStockPosition:{
             col = 5;
-            keyBoards = @[@(EMKeyBoardButtonTypeStockPositionFull),@(1),@(2),@(3),@(EMKeyBoardButtonTypeDelete),@(EMKeyBoardButtonTypeStockPositionHalf),@(4),@(5),@(6),@(EMKeyBoardButtonTypeNone),@(EMKeyBoardButtonTypeStockPositionOneThird),@(7),@(8),@(9),@(EMKeyBoardButtonTypeComplete),@(EMKeyBoardButtonTypeStockPositionQuartern),@(EMKeyBoardButtonTypeStockHeader00),@(0),@(EMKeyBoardButtonTypeResign),@(EMKeyBoardButtonTypeNone)];
+            keyBoards = @[@(EMKeyboardButtonTypeStockPositionFull),@(1),@(2),@(3),@(EMKeyboardButtonTypeDelete),@(EMKeyboardButtonTypeStockPositionHalf),@(4),@(5),@(6),@(EMKeyboardButtonTypeNone),@(EMKeyboardButtonTypeStockPositionOneThird),@(7),@(8),@(9),@(EMKeyboardButtonTypeComplete),@(EMKeyboardButtonTypeStockPositionQuartern),@(EMKeyboardButtonTypeStockHeader00),@(0),@(EMKeyboardButtonTypeResign),@(EMKeyboardButtonTypeNone)];
         }
             break;
             
             
         case EMCustomKeyboardTypeSecury:{
             col = 3;
-            keyBoards = @[@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeResign),@(EMKeyBoardButtonTypeNumber),@(EMKeyBoardButtonTypeDelete)];
+            keyBoards = @[@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeResign),@(EMKeyboardButtonTypeNumber),@(EMKeyboardButtonTypeDelete)];
         }
             break;
             
@@ -91,33 +91,33 @@
     
     for (int i = 0; i < keyBoards.count; i++) {
         NSInteger keyBoardType = [[keyBoards objectAtIndex:i] integerValue];
-        EMKeyBoardButton *btn = [EMKeyBoardButton buttonWithType:UIButtonTypeCustom];
+        EMKeyboardButton *btn = [EMKeyboardButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(i % col * btnWidth, i / col * kEMNumberKeyboardBtnHeight, btnWidth, kEMNumberKeyboardBtnHeight);
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
         [self addSubview:btn];
         
-        if (keyBoardType < EMKeyBoardButtonTypeNone) {
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeNumber;
+        if (keyBoardType < EMKeyboardButtonTypeNone) {
+            btn.KeyboardButtonType = EMKeyboardButtonTypeNumber;
             [btn setTitle:[NSString stringWithFormat:@"%zd",keyBoardType] forState:UIControlStateNormal];
         }else{
-            btn.keyBoardButtonType = keyBoardType;
+            btn.KeyboardButtonType = keyBoardType;
         }
         
         //页面上的特殊处理
         switch (self.keyboardType) {
             case EMCustomKeyboardTypeNumber:{//普通数字键盘特殊处理
                 //删除按钮占两格
-                if (keyBoardType == EMKeyBoardButtonTypeDelete) {
+                if (keyBoardType == EMKeyboardButtonTypeDelete) {
                     btn.frame = CGRectMake(i % col * btnWidth, i / col * kEMNumberKeyboardBtnHeight, btnWidth, kEMNumberKeyboardBtnHeight * 2);
                     [btn setBackgroundImage:[UIImage imageWithColor:kEMKeyboardBtnWhiteColor] forState:UIControlStateNormal];
-                }else if (keyBoardType == EMKeyBoardButtonTypeNone){
+                }else if (keyBoardType == EMKeyboardButtonTypeNone){
                     btn.frame = CGRectZero;
                 }
             }
                 break;
                 
             case EMCustomKeyboardTypeStockInput:{//股票输入键盘特殊处理
-                if (keyBoardType == EMKeyBoardButtonTypeDelete) {
+                if (keyBoardType == EMKeyboardButtonTypeDelete) {
                     [btn setBackgroundImage:[UIImage imageWithColor:kEMKeyboardBtnWhiteColor] forState:UIControlStateNormal];
                 }
             }
@@ -125,21 +125,21 @@
                 
             case EMCustomKeyboardTypeStockPosition:{//股票数量输入特殊处理
                 //删除按钮和完成占两格
-                if (keyBoardType == EMKeyBoardButtonTypeDelete) {
+                if (keyBoardType == EMKeyboardButtonTypeDelete) {
                     btn.frame = CGRectMake(i % col * btnWidth, i / col * kEMNumberKeyboardBtnHeight, btnWidth, kEMNumberKeyboardBtnHeight * 2);
                     [btn setBackgroundImage:[UIImage imageWithColor:kEMKeyboardBtnWhiteColor] forState:UIControlStateNormal];
-                }else if ( keyBoardType == EMKeyBoardButtonTypeComplete){
+                }else if ( keyBoardType == EMKeyboardButtonTypeComplete){
                     btn.frame = CGRectMake(i % col * btnWidth, i / col * kEMNumberKeyboardBtnHeight, btnWidth, kEMNumberKeyboardBtnHeight * 2);
                 }
-                else if (keyBoardType == EMKeyBoardButtonTypeNone){
+                else if (keyBoardType == EMKeyboardButtonTypeNone){
                     btn.frame = CGRectZero;
                 }
             }
                 break;
                 
             case EMCustomKeyboardTypeSecury:{//密码键盘特殊处理
-                if (keyBoardType == EMKeyBoardButtonTypeNumber) {
-                    btn.keyBoardButtonType = EMKeyBoardButtonTypeNumber;
+                if (keyBoardType == EMKeyboardButtonTypeNumber) {
+                    btn.KeyboardButtonType = EMKeyboardButtonTypeNumber;
                     //随机键盘上的数字
                     int loc = arc4random_uniform((int)numArray.count);
                     [btn setTitle:[numArray objectAtIndex:loc] forState:UIControlStateNormal];
@@ -161,41 +161,41 @@
 
  @param sender btn
  */
-- (void)btnClick:(EMKeyBoardButton *)sender
+- (void)btnClick:(EMKeyboardButton *)sender
 {
     
     UIView <UITextInput> *textView = [UIResponder firstResponderTextView];
-    switch (sender.keyBoardButtonType) {
+    switch (sender.KeyboardButtonType) {
             
-        case EMKeyBoardButtonTypeNumber:
-        case EMKeyBoardButtonTypeDecimal:
-        case EMKeyBoardButtonTypeStockHeader00:
-        case EMKeyBoardButtonTypeStockHeader600:
-        case EMKeyBoardButtonTypeStockHeader601:
-        case EMKeyBoardButtonTypeStockHeader300:
-        case EMKeyBoardButtonTypeStockHeader000:
-        case EMKeyBoardButtonTypeStockHeader002:{
+        case EMKeyboardButtonTypeNumber:
+        case EMKeyboardButtonTypeDecimal:
+        case EMKeyboardButtonTypeStockHeader00:
+        case EMKeyboardButtonTypeStockHeader600:
+        case EMKeyboardButtonTypeStockHeader601:
+        case EMKeyboardButtonTypeStockHeader300:
+        case EMKeyboardButtonTypeStockHeader000:
+        case EMKeyboardButtonTypeStockHeader002:{
             [self inputNumber:sender.titleLabel.text];
         }
             break;
             
             
-        case EMKeyBoardButtonTypeDelete:{
+        case EMKeyboardButtonTypeDelete:{
             [textView deleteBackward];
         }
             break;
             
-        case EMKeyBoardButtonTypeComplete:{
+        case EMKeyboardButtonTypeComplete:{
             [textView resignFirstResponder];
         }
             break;
             
-        case EMKeyBoardButtonTypeResign:{
+        case EMKeyboardButtonTypeResign:{
             [textView resignFirstResponder];
         }
             break;
             
-        case EMKeyBoardButtonTypeABC:{
+        case EMKeyboardButtonTypeABC:{
             //切换到字母键盘
             if (self.changeASCIIBlock) {
                 self.changeASCIIBlock();
@@ -203,12 +203,12 @@
         }
             break;
             
-        case EMKeyBoardButtonTypeStockPositionFull:
-        case EMKeyBoardButtonTypeStockPositionHalf:
-        case EMKeyBoardButtonTypeStockPositionOneThird:
-        case EMKeyBoardButtonTypeStockPositionQuartern:{
+        case EMKeyboardButtonTypeStockPositionFull:
+        case EMKeyboardButtonTypeStockPositionHalf:
+        case EMKeyboardButtonTypeStockPositionOneThird:
+        case EMKeyboardButtonTypeStockPositionQuartern:{
             if (self.stockPositionBtnClickBlock) {
-                self.stockPositionBtnClickBlock(sender.keyBoardButtonType);
+                self.stockPositionBtnClickBlock(sender.KeyboardButtonType);
             }
         }
             break;
@@ -248,9 +248,9 @@
     _needChangeASCIIKeyBoard = needChangeASCIIKeyBoard;
     
     for (UIView *subView in self.subviews) {
-        if ([subView isKindOfClass:[EMKeyBoardButton class]]) {
-            EMKeyBoardButton *subBtn = (EMKeyBoardButton *)subView;
-            if (subBtn.keyBoardButtonType == EMKeyBoardButtonTypeABC && self.keyboardType == EMCustomKeyboardTypeNumber) {
+        if ([subView isKindOfClass:[EMKeyboardButton class]]) {
+            EMKeyboardButton *subBtn = (EMKeyboardButton *)subView;
+            if (subBtn.KeyboardButtonType == EMKeyboardButtonTypeABC && self.keyboardType == EMCustomKeyboardTypeNumber) {
                 subBtn.hidden = !needChangeASCIIKeyBoard;
             }
         }

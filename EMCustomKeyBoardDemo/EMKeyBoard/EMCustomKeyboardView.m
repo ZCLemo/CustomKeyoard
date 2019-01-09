@@ -24,31 +24,31 @@
 /**
  密码键盘
  */
-@property (nonatomic,strong)EMNumberkeyBoard *secureKeyBoard;
+@property (nonatomic,strong)EMNumberKeyboard *secureKeyBoard;
 
 
 /**
  数字键盘
  */
-@property (nonatomic,strong)EMNumberkeyBoard *numberKeyBoard;
+@property (nonatomic,strong)EMNumberKeyboard *numberKeyBoard;
 
 
 /**
  字母键盘
  */
-@property (nonatomic,strong)EMASCIIKeyBoard *asciiKeyBoard;
+@property (nonatomic,strong)EMASCIIKeyboard *asciiKeyBoard;
 
 
 /**
  股票代码输入键盘
  */
-@property (nonatomic,strong)EMNumberkeyBoard *stockInputKeyBoard;
+@property (nonatomic,strong)EMNumberKeyboard *stockInputKeyBoard;
 
 
 /**
  买入，卖出股票数量输入键盘
  */
-@property (nonatomic,strong)EMNumberkeyBoard *stockPositionKeyBoard;
+@property (nonatomic,strong)EMNumberKeyboard *stockPositionKeyBoard;
 
 @end
 
@@ -125,19 +125,19 @@
     return _typeDictionary;
 }
 
-- (EMNumberkeyBoard *)secureKeyBoard
+- (EMNumberKeyboard *)secureKeyBoard
 {
     if (!_secureKeyBoard) {
-        _secureKeyBoard = [[EMNumberkeyBoard alloc] initWithFrame:self.bounds];
+        _secureKeyBoard = [[EMNumberKeyboard alloc] initWithFrame:self.bounds];
         _secureKeyBoard.keyboardType = EMCustomKeyboardTypeSecury;
     }
     return _secureKeyBoard;
 }
 
-- (EMNumberkeyBoard *)numberKeyBoard
+- (EMNumberKeyboard *)numberKeyBoard
 {
     if (!_numberKeyBoard) {
-        _numberKeyBoard = [[EMNumberkeyBoard alloc] initWithFrame:self.bounds];
+        _numberKeyBoard = [[EMNumberKeyboard alloc] initWithFrame:self.bounds];
         _numberKeyBoard.keyboardType = EMCustomKeyboardTypeNumber;
         __weak __typeof(self)weakSelf = self;
         _numberKeyBoard.changeASCIIBlock = ^{
@@ -150,10 +150,10 @@
     return _numberKeyBoard;
 }
 
-- (EMASCIIKeyBoard *)asciiKeyBoard
+- (EMASCIIKeyboard *)asciiKeyBoard
 {
     if (!_asciiKeyBoard) {
-        _asciiKeyBoard = [[EMASCIIKeyBoard alloc] initWithFrame:self.bounds];
+        _asciiKeyBoard = [[EMASCIIKeyboard alloc] initWithFrame:self.bounds];
         __weak __typeof(self)weakSelf = self;
         _asciiKeyBoard.changeNumberBlock = ^{
             
@@ -173,10 +173,10 @@
     return _asciiKeyBoard;
 }
 
-- (EMNumberkeyBoard *)stockInputKeyBoard
+- (EMNumberKeyboard *)stockInputKeyBoard
 {
     if (!_stockInputKeyBoard) {
-        _stockInputKeyBoard = [[EMNumberkeyBoard alloc] initWithFrame:self.bounds];
+        _stockInputKeyBoard = [[EMNumberKeyboard alloc] initWithFrame:self.bounds];
         _stockInputKeyBoard.keyboardType = EMCustomKeyboardTypeStockInput;
         __weak __typeof(self)weakSelf = self;
         _stockInputKeyBoard.changeASCIIBlock = ^{
@@ -189,10 +189,10 @@
     return _stockInputKeyBoard;
 }
 
-- (EMNumberkeyBoard *)stockPositionKeyBoard
+- (EMNumberKeyboard *)stockPositionKeyBoard
 {
     if (!_stockPositionKeyBoard) {
-        _stockPositionKeyBoard = [[EMNumberkeyBoard alloc] initWithFrame:self.bounds];
+        _stockPositionKeyBoard = [[EMNumberKeyboard alloc] initWithFrame:self.bounds];
         _stockPositionKeyBoard.keyboardType = EMCustomKeyboardTypeStockPosition;
     }
     return _stockPositionKeyBoard;

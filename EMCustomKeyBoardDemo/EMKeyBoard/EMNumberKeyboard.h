@@ -1,5 +1,5 @@
 //
-//  EMNumberkeyBoard.h
+//  EMNumberKeyboard.h
 //  AFNetworking
 //
 //  Created by zhaochen on 2019/1/3.
@@ -10,9 +10,9 @@
 
 typedef void(^EMChangeASCIIKeyBoardBlock)(void);
 
-typedef void(^ EMStockPositionBtnClickBlock)(EMKeyBoardButtonType keyBoardButtonType);
+typedef void(^ EMStockPositionBtnClickBlock)(EMKeyboardButtonType KeyboardButtonType);
 
-@interface EMNumberkeyBoard : UIView
+@interface EMNumberKeyboard : UIView
 
 @property (nonatomic,assign)EMCustomKeyboardType keyboardType;
 

@@ -1,189 +1,189 @@
 //
-//  EMKeyBoardButton.m
+//  EMKeyboardButton.m
 //  AFNetworking
 //
 //  Created by zhaochen on 2019/1/3.
 //  数字键盘按钮
 
-#import "EMKeyBoardButton.h"
+#import "EMKeyboardButton.h"
 #import "UIImage+EMColor.h"
 
-@implementation EMKeyBoardButton
+@implementation EMKeyboardButton
 
-- (void)setKeyBoardButtonType:(EMKeyBoardButtonType)keyBoardButtonType
+- (void)setKeyboardButtonType:(EMKeyboardButtonType)KeyboardButtonType
 {
-    _keyBoardButtonType = keyBoardButtonType;
+    _KeyboardButtonType = KeyboardButtonType;
     
     [self setBackgroundImage:[UIImage imageWithColor:kEMKeyboardBtnHighhlightColor] forState:UIControlStateSelected];
     
-    switch (keyBoardButtonType) {
-        case EMKeyBoardButtonTypeNumber:{
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:NO];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+    switch (KeyboardButtonType) {
+        case EMKeyboardButtonTypeNumber:{
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:NO];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
         }
             break;
             
-        case EMKeyBoardButtonTypeDelete:{
+        case EMKeyboardButtonTypeDelete:{
             [self setImage:[UIImage imageNamed:@"button_backspace_delete"] forState:UIControlStateNormal];
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
         }
             break;
             
-        case EMKeyBoardButtonTypeABC:{
+        case EMKeyboardButtonTypeABC:{
             [self setTitle:@"ABC" forState:UIControlStateNormal];
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
         }
             break;
             
-        case EMKeyBoardButtonTypeResign:{
+        case EMKeyboardButtonTypeResign:{
             [self setImage:[UIImage imageNamed:@"button_keyboard_shouqi"] forState:UIControlStateNormal];
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
         }
             break;
             
-        case EMKeyBoardButtonTypeComplete:{
+        case EMKeyboardButtonTypeComplete:{
             [self setTitle:@"完成" forState:UIControlStateNormal];
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
         }
             break;
             
-        case EMKeyBoardButtonTypeDecimal:{
+        case EMKeyboardButtonTypeDecimal:{
             [self setTitle:@"." forState:UIControlStateNormal];
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:NO];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:NO];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
         }
             break;
             
-        case EMKeyBoardButtonTypeLetter:{
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:NO];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:NO];
+        case EMKeyboardButtonTypeLetter:{
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:NO];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:NO];
         }
             break;
             
-        case EMKeyBoardButtonTypeToggleCase:{
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:NO];
+        case EMKeyboardButtonTypeToggleCase:{
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:NO];
             [self setImage:[UIImage imageNamed:@"CH_EN_icon_unsel"] forState:UIControlStateNormal];
             [self setImage:[UIImage imageNamed:@"CH_EN_icon_sel"] forState:UIControlStateSelected];
         }
             break;
             
-        case EMKeyBoardButtonTypeASCIIDelete:{
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:NO];
+        case EMKeyboardButtonTypeASCIIDelete:{
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:NO];
             [self setImage:[UIImage imageNamed:@"button_backspace_delete"] forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeComma:{
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:NO];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:NO];
+        case EMKeyboardButtonTypeComma:{
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:NO];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:NO];
             [self setTitle:@"," forState:UIControlStateNormal];
         }
             break;
             
             
-        case EMKeyBoardButtonTypeToNumber:{
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:NO];
+        case EMKeyboardButtonTypeToNumber:{
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:NO];
             [self setTitle:@"123" forState:UIControlStateNormal];
         }
             break;
             
-            case EMKeyBoardButtonTypeASCIIResign:{
-                [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-                [self configKeyBoardButtonTypeWithisNumberKeyBoard:NO];
+            case EMKeyboardButtonTypeASCIIResign:{
+                [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+                [self configKeyboardButtonTypeWithisNumberKeyBoard:NO];
                 [self setImage:[UIImage imageNamed:@"button_keyboard_shouqi"] forState:UIControlStateNormal];
             }
             break;
             
             
-        case EMKeyBoardButtonTypeASCIIDecimal:{
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:NO];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:NO];
+        case EMKeyboardButtonTypeASCIIDecimal:{
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:NO];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:NO];
             [self setTitle:@"." forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeASCIISpace:{
-            [self configKeyBoardButtonTypeWithIsFunctionKeyBoard:YES];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:NO];
+        case EMKeyboardButtonTypeASCIISpace:{
+            [self configKeyboardButtonTypeWithIsFunctionKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:NO];
             [self setTitle:@"空格" forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeStockHeader600:{
+        case EMKeyboardButtonTypeStockHeader600:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"600" forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeStockHeader601:{
+        case EMKeyboardButtonTypeStockHeader601:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"601" forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeStockHeader000:{
+        case EMKeyboardButtonTypeStockHeader000:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"000" forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeStockHeader002:{
+        case EMKeyboardButtonTypeStockHeader002:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"002" forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeStockHeader300:{
+        case EMKeyboardButtonTypeStockHeader300:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"300" forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeStockHeader00:{
+        case EMKeyboardButtonTypeStockHeader00:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"00" forState:UIControlStateNormal];
         }
             break;
             
             
-        case EMKeyBoardButtonTypeStockPositionFull:{
+        case EMKeyboardButtonTypeStockPositionFull:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"全仓" forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeStockPositionHalf:{
+        case EMKeyboardButtonTypeStockPositionHalf:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"半仓" forState:UIControlStateNormal];
         }
             break;
             
             
-        case EMKeyBoardButtonTypeStockPositionOneThird:{
+        case EMKeyboardButtonTypeStockPositionOneThird:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"1/3仓" forState:UIControlStateNormal];
         }
             break;
             
-        case EMKeyBoardButtonTypeStockPositionQuartern:{
+        case EMKeyboardButtonTypeStockPositionQuartern:{
             [self configStockBtn];
-            [self configKeyBoardButtonTypeWithisNumberKeyBoard:YES];
+            [self configKeyboardButtonTypeWithisNumberKeyBoard:YES];
             [self setTitle:@"1/4仓" forState:UIControlStateNormal];
         }
             break;
@@ -200,7 +200,7 @@
 
  @param isNumberKeyBoard 是否是数字键盘
  */
-- (void)configKeyBoardButtonTypeWithisNumberKeyBoard:(BOOL)isNumberKeyBoard
+- (void)configKeyboardButtonTypeWithisNumberKeyBoard:(BOOL)isNumberKeyBoard
 {
     if (isNumberKeyBoard) {
         self.layer.borderWidth = kEMASCIIKeyboardBtnBorderWith;
@@ -218,7 +218,7 @@
 
  @param isFunctionKeyBoard 是否是功能按钮
  */
-- (void)configKeyBoardButtonTypeWithIsFunctionKeyBoard:(BOOL)isFunctionKeyBoard
+- (void)configKeyboardButtonTypeWithIsFunctionKeyBoard:(BOOL)isFunctionKeyBoard
 {
     if (isFunctionKeyBoard) {
         [self setTitleColor:kEMKeyboardBtnLightTitleColor forState:UIControlStateNormal];

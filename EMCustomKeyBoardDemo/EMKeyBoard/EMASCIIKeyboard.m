@@ -1,16 +1,16 @@
 //
-//  EMASCIIKeyBoard.m
+//  EMASCIIKeyboard.m
 //  AFNetworking
 //
 //  Created by zhaochen on 2019/1/3.
 //
 
-#import "EMASCIIKeyBoard.h"
-#import "EMKeyBoardButton.h"
+#import "EMASCIIKeyboard.h"
+#import "EMKeyboardButton.h"
 #import "UIResponder+EMFirstResponder.h"
 #import "EMKeyboardDefine.h"
 
-@interface EMASCIIKeyBoard ()
+@interface EMASCIIKeyboard ()
 //所有高度
 @property (nonatomic,assign)CGFloat buttonHeight;
 //输入按钮宽度
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation EMASCIIKeyBoard
+@implementation EMASCIIKeyboard
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -65,10 +65,10 @@
     //距两边间距
     CGFloat sideSpace = 2;
     for (int i = 0; i < self.firstRowTitles.count; i++) {
-        EMKeyBoardButton *btn = [self createBtn];
+        EMKeyboardButton *btn = [self createBtn];
         [btn setTitle:self.firstRowTitles[i] forState:UIControlStateNormal];
         btn.frame = CGRectMake(sideSpace+i*(self.buttonSpace+self.buttonWeight), offsetY, self.buttonWeight, self.buttonHeight);
-        btn.keyBoardButtonType = EMKeyBoardButtonTypeLetter;
+        btn.KeyboardButtonType = EMKeyboardButtonTypeLetter;
         [self addSubview:btn];
         
         secondOffsetY = CGRectGetMaxY(btn.frame) + kEMASCIIKeyboardBtnVerticalSpace;
@@ -83,10 +83,10 @@
     //距两边间距
     CGFloat sideSpace = (kEMScreenWidth-self.secondRowTitles.count*self.buttonWeight - (self.secondRowTitles.count-1)*self.buttonSpace)/2;
     for (int i = 0; i < self.secondRowTitles.count; i++) {
-        EMKeyBoardButton *btn = [self createBtn];
+        EMKeyboardButton *btn = [self createBtn];
         [btn setTitle:self.secondRowTitles[i] forState:UIControlStateNormal];
         btn.frame = CGRectMake(sideSpace+i*(self.buttonSpace+self.buttonWeight), offsetY, self.buttonWeight, self.buttonHeight);
-        btn.keyBoardButtonType = EMKeyBoardButtonTypeLetter;
+        btn.KeyboardButtonType = EMKeyboardButtonTypeLetter;
         [self addSubview:btn];
         thirdOffsetY = CGRectGetMaxY(btn.frame) + kEMASCIIKeyboardBtnVerticalSpace;
     }
@@ -100,17 +100,17 @@
     //距两边间距
     CGFloat sideSpace = kEMASCIIKeyboardBtnHorizontalSpace/2;
     for (int i = 0; i < self.thirdRowTitles.count+2; i++) {
-        EMKeyBoardButton *btn = [self createBtn];
+        EMKeyboardButton *btn = [self createBtn];
         if (i == 0) {
             btn.frame = CGRectMake(sideSpace, offsetY, self.functionButtonWidth, self.buttonHeight);
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeToggleCase;
+            btn.KeyboardButtonType = EMKeyboardButtonTypeToggleCase;
         }else if (i == self.thirdRowTitles.count+1){
             btn.frame = CGRectMake(kEMScreenWidth-sideSpace-self.functionButtonWidth, offsetY, self.functionButtonWidth, self.buttonHeight);
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeASCIIDelete;
+            btn.KeyboardButtonType = EMKeyboardButtonTypeASCIIDelete;
         }else{
             btn.frame = CGRectMake(sideSpace+self.functionButtonWidth+self.buttonSpace+(i-1)*(self.buttonSpace+self.buttonWeight), offsetY, self.buttonWeight, self.buttonHeight);
             [btn setTitle:self.thirdRowTitles[i-1] forState:UIControlStateNormal];
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeLetter;
+            btn.KeyboardButtonType = EMKeyboardButtonTypeLetter;
         }
         [self addSubview:btn];
         
@@ -128,21 +128,21 @@
     CGFloat resignX = kEMScreenWidth-sideSpace-self.resignButtonWidth;
     CGFloat decimalX = resignX - self.buttonWeight - self.buttonSpace;
     for (int i = 0; i < 5; i ++) {
-        EMKeyBoardButton *btn = [self createBtn];
+        EMKeyboardButton *btn = [self createBtn];
         if (i == 0) {//切换数字键盘
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeToNumber;
+            btn.KeyboardButtonType = EMKeyboardButtonTypeToNumber;
             btn.frame = CGRectMake(sideSpace, offsetY, self.functionButtonWidth, self.buttonHeight);
         }else if (i == 4){//收起键盘
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeASCIIResign;
+            btn.KeyboardButtonType = EMKeyboardButtonTypeASCIIResign;
             btn.frame = CGRectMake(resignX, offsetY, self.resignButtonWidth, self.buttonHeight);
         }else if (i == 1){//逗号
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeComma;
+            btn.KeyboardButtonType = EMKeyboardButtonTypeComma;
             btn.frame = CGRectMake(sideSpace+self.functionButtonWidth+self.buttonSpace, offsetY, self.buttonWeight, self.buttonHeight);
         }else if(i == 3){//小数点
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeASCIIDecimal;
+            btn.KeyboardButtonType = EMKeyboardButtonTypeASCIIDecimal;
             btn.frame = CGRectMake(decimalX, offsetY, self.buttonWeight, self.buttonHeight);
         }else{//空格
-            btn.keyBoardButtonType = EMKeyBoardButtonTypeASCIISpace;
+            btn.KeyboardButtonType = EMKeyboardButtonTypeASCIISpace;
             CGFloat x = sideSpace+self.functionButtonWidth+self.buttonSpace*2 + self.buttonWeight;
             btn.frame = CGRectMake(x, offsetY, kEMScreenWidth-2*x - self.buttonWeight - self.buttonSpace, self.buttonHeight);
         }
@@ -152,56 +152,56 @@
     }
 }
 
-- (EMKeyBoardButton *)createBtn
+- (EMKeyboardButton *)createBtn
 {
-    EMKeyBoardButton *btn = [EMKeyBoardButton buttonWithType:UIButtonTypeCustom];
+    EMKeyboardButton *btn = [EMKeyboardButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
     return btn;
 }
 
 
-- (void)btnClick:(EMKeyBoardButton *)btn
+- (void)btnClick:(EMKeyboardButton *)btn
 {
     UIView <UITextInput> *textView = [UIResponder firstResponderTextView];
-    switch (btn.keyBoardButtonType) {
-        case EMKeyBoardButtonTypeLetter:{
+    switch (btn.KeyboardButtonType) {
+        case EMKeyboardButtonTypeLetter:{
             [self inputText:btn.titleLabel.text];
         }
             break;
         
-        case EMKeyBoardButtonTypeASCIIDecimal:{
+        case EMKeyboardButtonTypeASCIIDecimal:{
             [self inputText:btn.titleLabel.text];
         }
             break;
             
-        case EMKeyBoardButtonTypeComma:{
+        case EMKeyboardButtonTypeComma:{
             [self inputText:btn.titleLabel.text];
         }
             break;
             
-        case EMKeyBoardButtonTypeASCIISpace:{
+        case EMKeyboardButtonTypeASCIISpace:{
             [self inputText:@" "];
         }
             break;
             
-        case EMKeyBoardButtonTypeToNumber:{//切换
+        case EMKeyboardButtonTypeToNumber:{//切换
             if (self.changeNumberBlock) {
                 self.changeNumberBlock();
             }
         }
             break;
             
-        case EMKeyBoardButtonTypeToggleCase:{//大小写转换
+        case EMKeyboardButtonTypeToggleCase:{//大小写转换
             [self keyBoardToggleCase:btn];
         }
             break;
             
-        case EMKeyBoardButtonTypeASCIIDelete:{
+        case EMKeyboardButtonTypeASCIIDelete:{
             [textView deleteBackward];
         }
             break;
             
-        case EMKeyBoardButtonTypeASCIIResign:{
+        case EMKeyboardButtonTypeASCIIResign:{
             [textView resignFirstResponder];
         }
             break;
@@ -225,13 +225,13 @@
 /**
  切换大小写
  */
-- (void)keyBoardToggleCase:(EMKeyBoardButton *)btn
+- (void)keyBoardToggleCase:(EMKeyboardButton *)btn
 {
     btn.selected = !btn.selected;
     for (UIView *subview in self.subviews) {
-        if ([subview isKindOfClass:[EMKeyBoardButton class]]) {
-            EMKeyBoardButton *subBtn = (EMKeyBoardButton *)subview;
-            if (subBtn.keyBoardButtonType == EMKeyBoardButtonTypeLetter) {
+        if ([subview isKindOfClass:[EMKeyboardButton class]]) {
+            EMKeyboardButton *subBtn = (EMKeyboardButton *)subview;
+            if (subBtn.KeyboardButtonType == EMKeyboardButtonTypeLetter) {
                 [subBtn setTitle:btn.isSelected ? [subBtn.titleLabel.text uppercaseString] : [subBtn.titleLabel.text lowercaseString] forState:UIControlStateNormal];
             }
         }
