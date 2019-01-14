@@ -9,6 +9,8 @@
 
 @interface UIResponder (EMFirstResponder)
 
++ (void)inputText:(NSString *)text;
+
 + (UIResponder *)EMTradeCurrentFirstResponder;
 
 + (UIView <UITextInput> *)firstResponderTextView;

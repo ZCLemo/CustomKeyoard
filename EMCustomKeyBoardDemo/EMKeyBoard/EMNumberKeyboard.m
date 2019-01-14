@@ -226,11 +226,7 @@
  */
 - (void)inputNumber:(NSString *)text
 {
-    UIView <UITextInput> *textView = [UIResponder firstResponderTextView];
-    NSString *character = [NSString stringWithString:text];
-    if ([textView isKindOfClass:[UITextView class]] || [textView isKindOfClass:[UITextField class]]) {
-        [textView insertText:character];
-    }
+    [UIResponder inputText:text];
 }
 
 #pragma mark set & get
